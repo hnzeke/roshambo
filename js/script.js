@@ -33,3 +33,49 @@ function win(computerSelection, playerSelection) {
     playerSelection = playerSelection.substr(0, 1) + output.toLowerCase();
     alert(`You Win! ${playerSelection} beats ${computerSelection}`);
 }
+
+function playRound () {
+    if (computerSelection == "Rock") {
+        switch (playerSelection) {
+            case "PAPER":
+                win(computerSelection, playerSelection);
+                break;
+            
+            case "SCISSORS":
+                lose(computerSelection, playerSelection);
+                break;
+            
+            case "ROCK":
+                alert("It's a Draw!");
+                break;
+        }
+    } else if (computerSelection == "Paper") {
+        switch (playerSelection) {
+            case "SCISSORS":
+                win(computerSelection, playerSelection);
+                break;
+            
+            case "ROCK":
+                lose(computerSelection, playerSelection);
+                break;
+            
+            case "PAPER":
+                alert("It's a Draw!");
+                break;
+        }
+    } else if (computerSelection == "Scissors") {
+        switch (playerSelection) {
+            case "ROCK":
+                win(computerSelection, playerSelection);
+                break;
+            
+            case "PAPER":
+                lose(computerSelection, playerSelection);
+                break;
+            
+            case "SCISSORS":
+                alert("It's a Draw!");
+                break;
+        }
+    }
+}
