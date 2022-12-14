@@ -25,12 +25,14 @@ function lose(computerSelection, playerSelection) {
     let output = playerSelection.substr(1);
     playerSelection = playerSelection.substr(0, 1) + output.toLowerCase();
     alert(`You Lose! ${computerSelection} beats ${playerSelection}`);
+    compScore += 1;
 }
 
 function win(computerSelection, playerSelection) {
     let output = playerSelection.substr(1);
     playerSelection = playerSelection.substr(0, 1) + output.toLowerCase();
     alert(`You Win! ${playerSelection} beats ${computerSelection}`);
+    userScore += 1;
 }
 
 function playRound () {
