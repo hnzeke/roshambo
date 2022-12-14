@@ -13,3 +13,11 @@ function getComputerChoice () {
 }
 
 let computerSelection = getComputerChoice();
+
+function userInput () {
+    let input = prompt("Rock, Paper, Scissors");
+    input = input.toUpperCase()
+    return input;
+}
+
+let playerSelection = userInput();
