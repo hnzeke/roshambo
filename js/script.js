@@ -1,3 +1,6 @@
+let userScore = 0
+let compScore = 0
+
 function getComputerChoice () {
     let result = Math.floor(Math.random() * 3);
     if (result === 0) {
