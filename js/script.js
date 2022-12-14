@@ -21,3 +21,9 @@ function userInput () {
 }
 
 let playerSelection = userInput();
+
+function lose(computerSelection, playerSelection) {
+    let output = playerSelection.substr(1);
+    playerSelection = playerSelection.substr(0, 1) + output.toLowerCase();
+    alert(`You Lose! ${computerSelection} beats ${playerSelection}`);
+}
