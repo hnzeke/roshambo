@@ -1,5 +1,5 @@
 function getComputerChoice () {
-    result = Math.floor(Math.random() * 3);
+    let result = Math.floor(Math.random() * 3);
     if (result === 0) {
         result = "Rock";
         return result;
@@ -12,4 +12,4 @@ function getComputerChoice () {
     }
 }
 
-getComputerChoice();
+let computerSelection = getComputerChoice();
