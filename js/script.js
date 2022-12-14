@@ -101,3 +101,15 @@ function playRound () {
         }
     }
 }
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+      playRound();
+    }
+    (userScore > compScore) ? alert("Game Over. You Win") : alert("Game Over. You Lose")
+    if (userScore == compScore) {
+        alert("Game Over. It's a Draw")
+    } 
+}
+
+game();
