@@ -12,15 +12,11 @@ function getComputerChoice () {
     }
 }
 
-let computerSelection = getComputerChoice();
-
 function userInput () {
     let input = prompt("Rock, Paper, Scissors");
     input = input.toUpperCase()
     return input;
 }
-
-let playerSelection = userInput();
 
 function lose(computerSelection, playerSelection) {
     let output = playerSelection.substr(1);
@@ -35,46 +31,67 @@ function win(computerSelection, playerSelection) {
 }
 
 function playRound () {
+    let playerSelection = userInput();
+    let computerSelection = getComputerChoice();
+  
     if (computerSelection == "Rock") {
         switch (playerSelection) {
             case "PAPER":
                 win(computerSelection, playerSelection);
+                computerSelection = "";
+                playerSelection = "";
                 break;
             
             case "SCISSORS":
                 lose(computerSelection, playerSelection);
+                computerSelection = "";
+                playerSelection = "";
                 break;
             
             case "ROCK":
                 alert("It's a Draw!");
+                computerSelection = "";
+                playerSelection = "";
                 break;
         }
     } else if (computerSelection == "Paper") {
         switch (playerSelection) {
             case "SCISSORS":
                 win(computerSelection, playerSelection);
+                computerSelection = "";
+                playerSelection = "";
                 break;
             
             case "ROCK":
                 lose(computerSelection, playerSelection);
+                computerSelection = "";
+                playerSelection = "";
                 break;
             
             case "PAPER":
                 alert("It's a Draw!");
+                computerSelection = "";
+                playerSelection = "";
                 break;
         }
     } else if (computerSelection == "Scissors") {
         switch (playerSelection) {
             case "ROCK":
                 win(computerSelection, playerSelection);
+                computerSelection = "";
+                playerSelection = "";
                 break;
             
             case "PAPER":
                 lose(computerSelection, playerSelection);
+                computerSelection = "";
+                playerSelection = "";
                 break;
             
             case "SCISSORS":
                 alert("It's a Draw!");
+                computerSelection = "";
+                playerSelection = "";
                 break;
         }
     }
