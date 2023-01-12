@@ -110,9 +110,7 @@ function game(arg) {
     if (clickCount !== 5) {
         playRound(arg);
     }
-        /* for (let i = 0; i < 5; i++) {
-      playRound(arg);
-    }*/
+        
     if (clickCount === 5) {
         if (userScore > compScore) {
             message.textContent = "Game Over. You Win";
